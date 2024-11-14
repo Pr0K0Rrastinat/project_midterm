@@ -90,3 +90,10 @@ Below are some screenshots of the Weather App in action.
 - **API Integration**: Uses an external API to fetch and display movie information.
 
 ## Setup and Installation
+1. Clone the repository:
+    ```bash
+    git clone https://github.com/Pr0K0Rrastinat/project_midterm.git
+    ```
+2. Navigate into the project directory:
+    cd project_midterm
+3. Open `index.html` in your web browser to start the app.
