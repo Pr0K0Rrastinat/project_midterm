@@ -1,0 +1,223 @@
+/* General styles */
+body {
+    font-family: 'Helvetica Neue', sans-serif;
+    background-color: #1c1f3c;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+
+/* Variables for color scheme */
+:root {
+    --bg-primary: #1c1f3c;
+    --accent-color: #ff6600;
+    --bg-header: #2c2f52;
+    --highlight-color: #222266;
+    --error-color: #ff4d4d;
+    --search-bg: #eaeaea;
+}
+
+/* Container */
+.container {
+    background-color: rgb(250, 180, 90);
+    padding-bottom: 20px;
+    min-height: 100vh;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px;
+    background-color: var(--bg-header);
+}
+
+.search-bar {
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    width: 280px;
+    font-size: 16px;
+    outline: none;
+    transition: background-color 0.2s ease;
+}
+
+.search-bar:focus {
+    background-color: var(--search-bg);
+}
+
+/* Buttons */
+.watchlist-btn {
+    padding: 12px 22px;
+    border-radius: 25px;
+    background-color: var(--accent-color);
+    color: var(--bg-primary);
+    cursor: pointer;
+    font-size: 16px;
+    transition: transform 0.3s ease;
+}
+
+.watchlist-btn:hover {
+    transform: scale(1.05);
+}
+
+.sort-dropdown {
+    padding: 12px;
+    border-radius: 25px;
+    border: none;
+    background-color: var(--bg-header);
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+/* Movie Display Section */
+main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Movie Cards */
+.movie-card {
+    width: 210px;
+    background-color: var(--bg-header);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+}
+
+.movie-card:hover {
+    transform: scale(1.05);
+}
+
+.movie-card img {
+    width: 100%;
+    border-bottom: 5px solid white;
+}
+
+.movie-info {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.movie-info h3 {
+    font-size: 18px;
+}
+
+.movie-info span {
+    background-color: var(--accent-color);
+    padding: 6px 12px;
+    border-radius: 5px;
+}
+
+
+/* Watchlist container */
+.watchlist {
+    display: flex; /* Arrange items horizontally */
+    flex-wrap: wrap; /* Allow items to wrap to the next line */
+    justify-content: flex-start; /* Align items to the left */
+    gap: 20px; /* Space between movie cards */
+    padding: 20px; /* Add padding around the container */
+}
+
+/* Movie Cards inside the Watchlist */
+.watchlist .movie-card {
+    width: 210px; /* Set a fixed width for each movie card */
+    background-color: var(--bg-header);
+    border-radius: 12px;
+    overflow: hidden;
+    transition: transform 0.3s ease;
+    margin-bottom: 20px; /* Add some margin at the bottom for spacing */
+}
+
+.watchlist .movie-card:hover {
+    transform: scale(1.05);
+}
+
+.watchlist .movie-card img {
+    width: 100%;
+    border-bottom: 5px solid white;
+}
+
+.watchlist .movie-info {
+    padding: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 14px;
+}
+
+.watchlist .movie-info h3 {
+    font-size: 18px;
+}
+
+.watchlist-content {
+    position: relative;
+    margin: 6% auto;
+    padding: 25px;
+    width: 75%;
+    background-color: var(--bg-primary);
+    border-radius: 12px;
+    max-height: 500px; /* Set a maximum height for the container */
+    overflow-y: auto; /* Enable vertical scrolling if content exceeds max height */
+}
+
+
+/* Modal Windows */
+.modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.75);
+    z-index: 10;
+}
+
+.modal-content {
+    position: relative;
+    margin: 6% auto;
+    padding: 25px;
+    width: 75%;
+    background-color: var(--bg-primary);
+    border-radius: 12px;
+}
+
+
+
+.close-btn {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 28px;
+    cursor: pointer;
+    color: white;
+}
+
+/* Pagination */
+#page-controls {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+    gap: 18px;
+}
+
+.pagination-btn {
+    padding: 10px 22px;
+    background-color: var(--bg-header);
+    color: white;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.pagination-btn:hover {
+    background-color: var(--accent-color);
+}
